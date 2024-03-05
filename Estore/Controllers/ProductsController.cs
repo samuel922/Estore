@@ -24,7 +24,7 @@ namespace Estore.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProduct(Guid id)
         {
-            return await _context.Products.FindAsync(id);
+            return await _context.Products.FindAsync(id)!;
         }
     }
 }
